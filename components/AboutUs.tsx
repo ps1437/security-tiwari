@@ -3,14 +3,17 @@ import { ContactInfo, WorkCulture } from '../data/Data';
 
 export default function AboutUs() {
   return (
-    <section id="aboutus" className="py-8 bg-gray-dark bg-yellow-500 p-12 mt-8 md:mt-2 ">
+    <section id="aboutus" className="py-8 bg-gray-dark bg-yellow-500  mt-8 md:mt-2 ">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="hidden md:block md:w-1/2 mb-8 md:mb-0 fadeInRight-animation">
-          <img
-            src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bsfms.com%2Fsecurity-guard-services-in-hyderabad%2F&psig=AOvVaw39ahzxczFrHchPnQiLilan&ust=1714978319315000&source=images&cd=vfe&opi=89978449&ved=2ahUKEwjtpLed9vWFAxWdZmwGHTiBC3YQjRx6BAgAEBY"
-
-            alt={ContactInfo.name}
-          />
+        
+           <Image
+              src="/security3.jpeg"
+              height={450}
+              width={600}
+              className=" bg-secondary rounded border-4 border-white"
+              alt={ContactInfo.name}
+            />
         </div>
 
         <div className="md:w-1/2  mt-20 md:mt-2 fadeInLeft-animation">

@@ -6,7 +6,7 @@ import { Services } from "../data/Data";
 import Carousel from './Carousel';
 
 let slides = [
-  "https://www.bsfms.com/wp-content/uploads/2022/12/slider-1.jpg",
+  "./security.jpeg",
   "https://www.allstarsecurityservice.com/wp-content/uploads/2018/07/main-banner.jpg",
   "hthttps://assets-global.website-files.com/6152d7874f8c968f84305aec/654b9175e05c2c7376c8f35f_Top%20Security%20Guard%20Interview%20Questions%20and%20Answers.jpg",
   "https://img.freepik.com/premium-photo/close-up-indian-male-security-guard-surveillance-room_161094-14189.jpg",

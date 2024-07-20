@@ -8,7 +8,7 @@ import SecurityServices from "@/components/SecurityServices";
 export default function Home() {
   return (
     <div
-      className="bg-[rgb(119,119,125)] text-white h-screen snap-y snap-mandatory
+      className=" bg-yellow-500 text-white h-screen snap-y snap-mandatory
         overflow-scroll overflow-x-hidden z-0 
         scrollbar-track-gray-400/20 scrollbar-thumb-secondary "
     >

@@ -8,7 +8,7 @@ export default function Carousel({ slides }: any) {
     const interval = setInterval(() => {
       if (current === slides.length - 1) {
         // If at the end, change direction to backward
-        setDirection(1);
+        setDirection(-1);
       } else if (current === 0) {
         // If at the beginning, change direction to forward
         setDirection(1);
