@@ -89,12 +89,12 @@ const ContactInfo = {
   myName: "TIWARIJI SECURITY SERVICES",
   aboutMe: "Detail-oriented and results-driven Charter Accountant with over 5 years of extensive experience in financial analysis, reporting, and strategic planning. Adept at navigating complex financial landscapes and implementing sound accounting principles to drive organizational growth and profitability. Proven track record of streamlining processes, optimizing financial performance, and ensuring compliance with regulatory standards. Strong analytical skills combined with effective communication abilities, enabling the translation of financial data into actionable insights for stakeholders at all levels. Committed to delivering excellence and adding value through strategic financial management.",
   subTitle: "Ved Prakash & Pradeep Tiwari",
-  address: "20-1-280/3, Pura Pool, Charminar, Hyderabad, Telangana, 500002",
+  address: "21-4-908, Charmahal Petla Burz, Hussaini Alam, Hyderabad, Telangana 500064",
   email: "tiwarijisecuritiesservices@gmail.com",
   mobileNumber: "+91 9908114214, 8686284902",
   myProfileUrl: "https://media.licdn.com/dms/image/C5603AQG96robP0be2Q/profile-displayphoto-shrink_400_400/0/1588928441889?e=1720051200&v=beta&t=TrnqLSPCWICyy2vE5DtE7PhPbMNqls95PupvQLYgAwE",
   instagramLink: "https://www.instagram.com/tiwarijisecurityservices?igsh=MXdwNHo3bTJlbXl3Zw==",
-  coordinates: { lat: 17.370967510412534, log: 78.47758925481486 }
+  coordinates: { lat: 17.364360, log: 78.465980 }
 };
 const RatingData: RatingProps[] = [
   {
