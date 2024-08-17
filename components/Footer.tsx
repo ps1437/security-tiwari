@@ -75,9 +75,9 @@ const Footer: React.FC<FooterProps> = () => {
             </h6>
             <div className='flex  flex-wrap text-center'>
               {Services.map(val => (
-                <div className="md:w-full w-1/2 mb-2" key={val.id}>
+                <div className="w-full w-1/2 mb-2" key={val.id}>
                   <p>
-                    <Link href="/services" className="underline underline-offset-4 text-white">{val.name}</Link>
+                    <span  className=" text-white">{val.name}</span>
                   </p>
                 </div>
               ))}
@@ -86,8 +86,6 @@ const Footer: React.FC<FooterProps> = () => {
 
 
           </section>
-
-
 
 
           <section>

@@ -7,29 +7,29 @@ import SecurityServices from "@/components/SecurityServices";
 
 export default function Home() {
   return (
-    <div
-      className=" bg-yellow-500 text-white h-screen snap-y snap-mandatory
-        overflow-scroll overflow-x-hidden z-0 
-        scrollbar-track-gray-400/20 scrollbar-thumb-secondary "
-    >
+    <div className="bg-yellow-500 text-white h-screen overflow-auto scrollbar-track-gray-400/20 scrollbar-thumb-secondary">
+      <Navigation />
+      <main>
+        <section id="home">
+          <Hero />
+        </section>
 
-<Navigation/>
-      <section id="home" className="snap-proximity ">
-        <Hero />
-      </section>
+        <section id="about">
+          <AboutUs />
+        </section>
 
-      <section id="about" className="snap-proximity">
-        <AboutUs />
-      </section>
-      <section id="securityServices" className="snap-proximity">
-        <SecurityServices />
-      </section>
-      <section id="feedback" className="snap-proximity">
-        <Feedback />
-      </section>
-      <section id="contacts" className="snap-proximity">
-        <Footer />
-      </section>
+        <section id="securityServices">
+          <SecurityServices />
+        </section>
+
+        <section id="feedback">
+          <Feedback />
+        </section>
+
+        <section id="contacts">
+          <Footer />
+        </section>
+      </main>
     </div>
   );
 }

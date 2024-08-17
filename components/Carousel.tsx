@@ -1,58 +1,54 @@
 import { useEffect, useState } from "react";
 
-export default function Carousel({ slides }: any) {
+export default function Carousel({ slides }: { slides: string[] }) {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1); // Direction: 1 for forward, -1 for backward
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (current === slides.length - 1) {
-        // If at the end, change direction to backward
-        setDirection(-1);
-      } else if (current === 0) {
-        // If at the beginning, change direction to forward
-        setDirection(1);
-      }
-
-      setCurrent((prevCurrent) => prevCurrent + direction);
+      setCurrent((prevCurrent) => {
+        if (prevCurrent === slides.length - 1) {
+          setDirection(-1);
+        } else if (prevCurrent === 0) {
+          setDirection(1);
+        }
+        return prevCurrent + direction;
+      });
     }, 5000);
 
     return () => clearInterval(interval);
   }, [current, direction, slides.length]);
 
+  const normalizedCurrent = (current + slides.length) % slides.length;
+
   return (
-    <div className="overflow-hidden relative w-full h-96 opacity-80 mix-blend-screen bg-secondary">
+    <div className="overflow-hidden relative w-full md:h-[75vh]">
       <div
-        className="flex transition ease-out duration-300"
+        className="flex transition-transform ease-out duration-500"
         style={{
-          transform: `translateX(-${current * 100}%)`,
+          transform: `translateX(-${normalizedCurrent * 100}%)`,
         }}
       >
-        {slides.map((s: any, index: number) => {
-          return (
-            <img
-              src={s}
-              className="object-cover h-full w-full"
-              alt="slide"
-              key={index}
-            />
-          );
-        })}
+        {slides.map((s: string, index: number) => (
+          <img
+            src={s}
+            className="object-cover w-full h-full flex-shrink-0"
+            alt={`slide ${index}`}
+            key={index}
+          />
+        ))}
       </div>
 
       <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
-        {slides.map((_: any, i: number) => {
-          return (
-            <div
-              onClick={() => {
-                setCurrent(i);
-              }}
-              key={"circle" + i}
-              className={`rounded-full w-3 h-3 cursor-pointer ${i === current ? "bg-primary" : "bg-secondary"
-                }`}
-            ></div>
-          );
-        })}
+        {slides.map((_, i: number) => (
+          <div
+            onClick={() => setCurrent(i)}
+            key={i}
+            className={`rounded-full w-3 h-3 cursor-pointer ${
+              i === normalizedCurrent ? "bg-yellow-500" : "bg-secondary"
+            }`}
+          ></div>
+        ))}
       </div>
     </div>
   );

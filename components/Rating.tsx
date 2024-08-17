@@ -29,15 +29,14 @@ export default function Rating({ ratingProps }: Rating) {
 
         <div className="bg-white min-w-1xl flex flex-col rounded-xl shadow-lg m-4 w-72 ">
             <div className="bg-white w-full flex flex-col items-center rounded-xl p-8">
-                <div className="flex flex-col items-center py-2 space-y-3">
-                    <div className="flex space-x-3">
-
+                <div className="flex flex-col items-center space-y-3">
+                    <div className="flex space-2-x">
                         {renderStars()}
                     </div>
-                    <span className="text-gray-600 text-sm font-semibold text-right opacity-85 font-mono">{ratingProps?.service}</span>
-  <span className="text-base text-gray-800">&quot;{ratingProps?.description}&quot;</span>
+                    <span className="text-gray-600 text-sm font-semibold text-right opacity-85 font-mono text-large">{ratingProps?.service}</span>
+  <span className="text-gray-800 text-base">{ratingProps?.description}</span>
                 </div>
-                <span className="text-gray-600 text-sm font-semibold text-right opacity-85 font-mono"> By - {ratingProps?.name}</span>
+                <span className="text-gray-600 text-sm font-semibold text-right opacity-85 font-mono mt-2"> By - {ratingProps?.name}</span>
             </div>
         </div>
     )

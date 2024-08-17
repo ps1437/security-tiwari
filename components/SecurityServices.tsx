@@ -16,13 +16,13 @@ Cards.displayName = "Cards";
 
 export default function SecurityServices() {
     return (
-        
-        <div id='securityServices' className=' bg-secondary p-2 md:p-8'>
+
+        <div id='securityServices' className=' bg-secondary  md:p-8'>
             <div className="md:hidden bg-secondary h-8 p-8  ">
-                                   <h4 className="  md:flex  text-center text-lg text-primary font-semibold  mb-4">Our Services</h4>
- 
-                                   </div>
-                                   <div className=" py-12 h-80 md:h-48  relative px-24 ">
+                <h4 className="  md:flex  text-center text-4xl text-primary font-semibold  mb-4">Our Services</h4>
+
+            </div>
+            <div className=" py-12 h-80 md:h-48  relative px-24 ">
                 <div className=" flex-col md:flex-row absolute inset-0 flex items-center justify-center">
                     <ul className="list-none p-0 m-0 text-white text-sm md:text-lg flex flex-col md:flex-wrap md:flex-row justify-center fadeInRight-animation items-center">
                         {Services.slice(0, Services.length / 2).map((service, index) => (
@@ -56,8 +56,7 @@ export default function SecurityServices() {
                     </div>
                 </div>
             </div>
-            <div className='flex flex-wrap justify-between px-12 mt-2 md:mt-4 fadeInRight-animation'
-            >
+            <div className='flex flex-wrap justify-between px-4 mt-2 md:mt-4 fadeInRight-animation'  >
                 <Cards />
             </div>
         </div>
